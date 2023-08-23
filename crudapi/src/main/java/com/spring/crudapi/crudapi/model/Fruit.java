@@ -11,4 +11,12 @@ public class Fruit {
     String name;
     int weight;
 
+    @Override
+    public String toString() {
+        return "Fruit{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", weight=" + weight +
+                '}';
+    }
 }

@@ -1,12 +1,11 @@
 package com.spring.crudapi.crudapi.controller;
 
 import com.spring.crudapi.crudapi.model.ApiResponse;
+import com.spring.crudapi.crudapi.model.Fruit;
 import com.spring.crudapi.crudapi.service.FruitService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
@@ -31,6 +30,24 @@ public class FruitController {
     public ApiResponse getFruits() {
         log.info("--> FruitController.getFruits() reached");
         return fruitService.getFruits();
+    }
+
+    @PostMapping(value = "/fruit")
+    public ApiResponse addFruit(@RequestBody Fruit fruit) {
+        log.info("--> FruitController.addFruit() reached");
+        return fruitService.addFruit(fruit);
+    }
+
+    @PutMapping(value = "/fruit")
+    public ApiResponse updateFruit(@RequestBody Fruit fruit) {
+        log.info("--> FruitController.updateFruit() reached");
+        return fruitService.updateFruit(fruit);
+    }
+
+    @DeleteMapping(value = "/fruit/{id}")
+    public ApiResponse removeFruitById(@PathVariable("id") int id){
+        log.info("--> FruitController.removeFruitById() reached");
+        return fruitService.removeFruitById(id);
     }
 
 
