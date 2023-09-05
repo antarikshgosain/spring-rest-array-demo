@@ -17,6 +17,8 @@ Base path - `http://localhost:8800`
 7. HEALTH - `/health`: responds with "Health - OK" and HTTP status code of 200 (OK) 
 8. SERVER-INFO - `/server-info`: gives active port number, Device IP address and Device MAC Address
 9. HARDWARE-INFO - `/hardware-info`: gives used & total RAM (with %), used and total Disk Space (with %) and CPU Utilization %
+10. EMPTY ENDPOINT - `/`: gives back the URL to Swagger Documentation for User to view all of the available Endpoints
+
 ## Application Configurations
 The Default server port is set to `8800`
 https://github.com/antarikshgosain/spring-rest-array-demo/blob/24e4963c32ed84341fb3d17aa01fcd91c8240625/crudapi/src/main/resources/application.properties#L3
