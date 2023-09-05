@@ -144,6 +144,12 @@ public class UtilController {
         return (1.0 - ((double) idleDelta / totalDelta)) * 100.0;
     }
 
+    @GetMapping(value = "")
+    public String fallback(){
+        return "Please visit http://localhost:8800/swagger-ui/#/ to see the Swagger Documentation Containing All Available Endpoints";
+    }
+
+
 
 
 }
