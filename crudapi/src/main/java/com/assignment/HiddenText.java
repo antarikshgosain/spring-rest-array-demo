@@ -17,13 +17,11 @@ public class HiddenText {
     private static void printPyramidRight(Map<Integer, String> map, int max) {
         int index = 0;
         int increment = 0;
-        while ( index + increment <= max+1 ){
+        while ( index <= max ){
             if(null != map.get(index)){
                 //System.out.println(index+" "+map.get(index)); //debugging purpose
                 System.out.println(map.get(index));
-            }else{
-                System.out.println("Null found at "+index); //logging purpose
-            }
+            }//else{System.out.println("Null found at "+index); //logging purpose}
             increment++;
             index += increment;
         }
@@ -43,8 +41,8 @@ public class HiddenText {
                 }
                 map.put(intValue, stringValue);
             }
-            System.out.println("Max Value: "+ max);
-            //System.out.println(map.toString()); //loggin purpose
+            //System.out.println("Max Value: "+ max); //logging purpose
+            //System.out.println(map.toString()); //logging purpose
             return map;
         } catch (IOException | NumberFormatException e) {
             e.printStackTrace();
