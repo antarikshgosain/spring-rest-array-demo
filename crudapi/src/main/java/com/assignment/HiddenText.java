@@ -19,7 +19,8 @@ public class HiddenText {
         int increment = 0;
         while ( index + increment <= max+1 ){
             if(null != map.get(index)){
-                System.out.println(index+""+map.get(index));
+                //System.out.println(index+" "+map.get(index)); //debugging purpose
+                System.out.println(map.get(index));
             }else{
                 System.out.println("Null found at "+index); //logging purpose
             }
