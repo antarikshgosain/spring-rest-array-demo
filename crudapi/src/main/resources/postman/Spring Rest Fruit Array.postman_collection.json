@@ -200,6 +200,22 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "(empty)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8800",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800"
+				}
+			},
+			"response": []
 		}
 	]
 }
